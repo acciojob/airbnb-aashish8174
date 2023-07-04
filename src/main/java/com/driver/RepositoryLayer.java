@@ -72,7 +72,7 @@ public class RepositoryLayer {
         int booking = 0;
         for (String id : bookingDB.keySet()){
             int adhar = bookingDB.get(id).getBookingAadharCard();
-            if (adhar==aadharCard) booking++;
+            if (adhar==aadharCard) booking+=bookingDB.get(id).getNoOfRooms();
         }
         return booking;
     }
